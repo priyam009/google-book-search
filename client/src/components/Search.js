@@ -3,7 +3,7 @@ import "../App.css";
 
 function Search(props) {
   return (
-    <div className="container">
+    <div className="container search-content">
       <h4>
         Book Search
       </h4>
