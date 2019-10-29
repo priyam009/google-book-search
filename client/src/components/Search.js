@@ -9,7 +9,7 @@ function Search(props) {
       </h4>
       <form>
         <div className="form-group">
-          <label for="inputBook">Book</label>
+          <label htmlFor="inputBook">Book</label>
           <input
             type="email"
             className="form-control"
