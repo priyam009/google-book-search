@@ -18,7 +18,7 @@ function Result(props) {
                   View (URL)
                 </button>
                 <button href="#" className="card-link btn btn-primary">
-                  Save
+                  {props.action}
                 </button>
               </div>
             </div>
