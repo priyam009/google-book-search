@@ -10,7 +10,7 @@ class Search extends Component {
       <>
       <Header />
       <Form />
-      <Result title="Results"/>
+      <Result title="Results" action="Save"/>
       </>
     )
   }
