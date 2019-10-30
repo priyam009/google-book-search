@@ -19,7 +19,7 @@ function Search(props) {
           />
         </div>
         <button type="submit" className="btn btn-primary d-flex d-block justify-content-end">
-          Submit
+          Search
         </button>
       </form>
     </div>
