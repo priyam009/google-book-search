@@ -10,7 +10,7 @@ class Save extends Component {
       <>
       <Header />
       <Form />
-      <Result title="Saved"/>
+      <Result title="Saved" action="Delete"/>
       </>
     )
   }
