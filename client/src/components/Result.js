@@ -26,7 +26,7 @@ function Result(props) {
               <img
                 src="https://picsum.photos/200"
                 className="card-img-top"
-                alt="Example image"
+                alt="Example"
               />
               <p className="card-text ml-3">Book Description</p>
             </div>
