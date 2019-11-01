@@ -3,6 +3,7 @@ import "../index.css";
 import Header from "../components/Header";
 import Form from "../components/Form";
 import Result from "../components/Result";
+import API from "../utils/API";
 
 class Search extends Component {
   state = {
@@ -13,13 +14,14 @@ class Search extends Component {
     this.setState({
       [name]: value
     });
-  }
+  };
 
-  
   handleClick = () => {
-    console.log("Search is", this.state.title);
-  }
-  
+    API.getBooks(this.state.title)
+      .then(res => console.log("back res", res))
+      .catch(err => console.log(err));
+  };
+
   render() {
     return (
       <>
