@@ -78,6 +78,7 @@ class Search extends Component {
             <Books
               key={index}
               action="Save"
+              id={index}
               title={book.title}
               subtitle={book.subtitle}
               description={book.description}
