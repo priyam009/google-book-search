@@ -6,21 +6,17 @@ function Books(props) {
     <div className="card mt-3">
       <div className="card-body">
         <div className="d-flex justify-content-between">
-          <div>
+          <div className="w-50">
             <h5 className="card-title">{props.title}</h5>
             <h6 className="card-subtitle mb-2 text-muted">{props.subtitle}</h6>
             <p className="card-subtitle mb-2 text-muted">{props.authors}</p>
           </div>
           <div>
-            <button
-              href={props.link}
-              target="_blank"
-              className="card-link btn btn-primary"
-            >
-              View
+            <button className="card-link btn btn-dark">
+              <a rel="noopener noreferrer" href={props.link} className="text-light books-anchor" target="_blank">View</a>
             </button>
             <button
-              className="card-link btn btn-primary"
+              className="card-link btn btn-dark"
               onClick={() => props.handleBook(props)}
             >
               {props.action}
