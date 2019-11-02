@@ -7,36 +7,58 @@ import API from "../utils/API";
 
 class Save extends Component {
   state = {
-    books: {}
-  }
+    savedBooks: []
+  };
 
   componentDidMount() {
-    API.getBooks()
-      .then(res => this.setState({ book: res.data }))
-      .catch(err => console.log(err));
+    this.loadBooks();
   }
 
+  loadBooks = () => {
+    API.getBooks()
+      .then(res =>
+        // console.log("mount res", res.data)
+        this.setState({ savedBooks: res.data })
+      )
+      .catch(err => console.log(err));
+  };
+
+  handleBook = book => {
+    // console.log(book)
+    API.deleteBook(book.id)
+      .then(res => this.loadBooks())
+      .catch(err => console.log(err));
+  };
+
   render() {
+    // console.log(this.state.savedBooks);
     return (
       <>
-      <Header />
-      <Title heading="Saved">
-          {this.state.books.map((book, index) => (
-            <Books
-              key={index}
-              action="Save"
-              title={book.title}
-              subtitle={book.subtitle}
-              description={book.description}
-              image={book.image}
-              authors={book.authors}
-              link={book.link}
-              handleBook={this.handleBook}
-            />
-          ))}
+        <Header />
+        <Title heading="Saved">
+          {this.state.savedBooks.length ? (
+            <>
+              {this.state.savedBooks.map((book, index) => (
+                <Books
+                  key={index}
+                  action="Delete"
+                  id={book._id}
+                  title={book.title}
+                  subtitle={book.subtitle}
+                  description={book.description}
+                  image={book.image}
+                  authors={book.authors}
+                  link={book.link}
+                  handleBook={this.handleBook}
+                />
+              ))}
+            </>
+          ) : (
+            <h5>No Results to Display</h5>
+          )}
         </Title>
       </>
-    )
+    );
   }
 }
 
