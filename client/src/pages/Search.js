@@ -19,7 +19,7 @@ class Search extends Component {
   };
 
   handleClick = () => {
-    API.getBooks(this.state.title)
+    API.googleBooks(this.state.title)
       .then(res => {
         // console.log("Response", res);
         // console.log("Count", res.data.items)
