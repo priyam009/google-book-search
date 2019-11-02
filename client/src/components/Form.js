@@ -16,7 +16,6 @@ class Form extends React.Component {
   }
 
   render() {
-
     return (
       <div className="container search-content">
         <h4>Book Search</h4>
