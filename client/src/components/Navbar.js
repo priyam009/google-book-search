@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" href="/">
-        Google Books Search
+        Searchtopia
       </a>
       <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
         <div className="navbar-nav">
