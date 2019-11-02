@@ -21,7 +21,6 @@ class Form extends React.Component {
         <h4>Book Search</h4>
         <form>
           <div className="form-group">
-            {/* <label htmlFor="inputBook">Book</label> */}
             <input
               type="text"
               name="title"
@@ -35,7 +34,7 @@ class Form extends React.Component {
           </div>
           <button
             type="submit"
-            className="btn btn-primary d-flex d-block justify-content-end"
+            className="btn btn-dark d-flex d-block justify-content-end"
             onClick={this.onFormSubmit}
           >
             Search
