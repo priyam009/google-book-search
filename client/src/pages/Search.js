@@ -73,7 +73,21 @@ class Search extends Component {
           handleChange={this.handleChange}
           handleClick={this.handleClick}
         />
-        <Result title="Results" action="Save" />
+        <Title heading="Results">
+          {this.state.books.map((book, index) => (
+            <Books
+              key={index}
+              action="Save"
+              title={book.title}
+              subtitle={book.subtitle}
+              description={book.description}
+              image={book.image}
+              authors={book.authors}
+              link={book.link}
+              handleBook={this.handleBook}
+            />
+          ))}
+        </Title>
       </>
     );
   }
