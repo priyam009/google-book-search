@@ -17,21 +17,18 @@ class Save extends Component {
   loadBooks = () => {
     API.getBooks()
       .then(res =>
-        // console.log("mount res", res.data)
         this.setState({ savedBooks: res.data })
       )
       .catch(err => console.log(err));
   };
 
   handleBook = book => {
-    // console.log(book)
     API.deleteBook(book.id)
       .then(res => this.loadBooks())
       .catch(err => console.log(err));
   };
 
   render() {
-    // console.log(this.state.savedBooks);
     return (
       <>
         <Header />

@@ -21,9 +21,6 @@ class Search extends Component {
   handleClick = () => {
     API.googleBooks(this.state.title)
       .then(res => {
-        // console.log("Response", res);
-        // console.log("Count", res.data.items)
-
         const response = res.data.items;
         const newBooks = [];
 
@@ -44,8 +41,6 @@ class Search extends Component {
         this.setState({
           books: newBooks
         });
-
-        // console.log("Books", this.state.books);
       })
       .catch(err => console.log(err));
   };
