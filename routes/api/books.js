@@ -1,11 +1,10 @@
+require("dotenv").config();
 const axios = require("axios");
 const router = require("express").Router();
 const booksController = require("../../controllers/booksController");
 
 router.get("/google", (req, res) => {
-  // console.log("req", req.query.q);
-  const apiKey = "AIzaSyAOLhDUYDH4kz5qkq_n1zhO6QLvCsxe4DQ";
-
+  const apiKey = process.env.BOOKS_KEY;
   axios
     .get(
       "https://www.googleapis.com/books/v1/volumes?q=" +
