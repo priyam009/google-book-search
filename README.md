@@ -1,6 +1,6 @@
 # Searchtopia
 
-* Are you as curious as Bill Gates and love reading books? Want to keep a checklist list of all the books you want to read? Than this app is for you.
+* Are you as curious as Bill Gates and love reading books? Want to keep a checklist list of all the books you want to read? Then this app is for you.
 
 * This app lets you search for your desired book criteria from the Google's Books API and save it as your future checklist item.
 
